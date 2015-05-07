@@ -36,16 +36,6 @@ If you plan to contribute to the development of QGC, you will want this option, 
 Goto GitHub Help and see Fork A Repo
 Fork the QGC Repo
 
-### Initialize submodules
-After cloning or forking you will need to initialize and update the submodules using these commands in you qgroundcontrol source directory:
-
-```
-git submodule init
-git submodule update
-```
-
-Each time you pull new source to your repository you should re-run "git submodule update" to get the latest submodules as well.
-
 ## Building QGroundControl
 QGroundControl builds are supported for OSX, Linux and Windows. See the individual sections below for instruction on how to build on each OS. Also make sure to look at the "Additional Build Notes" section below.
 
@@ -149,15 +139,6 @@ Qt Creator is a full-blown development IDE. You can even debug right from within
 QGroundcontrol has functionality that is dependent on the operating system and libraries installed by the user. The following sections describe these features, their dependencies, and how to disable/alter them during the build process. These features can be forcibly enabled/disabled by specifying additional values for variables either at the command line when calling `qmake` or in the `user_config.pri`. When calling `qmake` additional variables can be set using the syntax `VARIABLE="SPACE_SEPARATED_VALUES"`, which can be repeated for multiple variables. For example: `qmake DEFINES="DISABLE_QUPGRADE DISABLE_SPEECH" MAVLINK_CONF="sensesoar"` disables the QUpgrade widget, speech functionality, and sets the MAVLink dialect to sensesoar. These values can be more permanently specified by setting them in the `user_config.pri` file in the root directly. Create this file as a plain text file and ensure it ends in .pri (not .pri.txt!).
 
 **NOTE:** Any variables specified at the command line call to `qmake` will override those set in `user_config.pri`.
-
-### QUpgrade
-QUpgrade is a submodule (a Git feature like a sub-repository) that contains extra functionality. It is compiled in by default if it has initialized and updated. It can be disabled by specifying `DISABLE_QUPGRADE` in the `DEFINES` variable.
-
-To include QUpgrade functionality run the following (only needs to be done once after cloning the qggroundcontrol git repository):
-* `git submodule init`
-* `git submodule update`
-
-The QUpgrade module relies on `libudev` on Linux platforms, so be sure to install the development version of that package.
 
 ### Specifying MAVLink dialects
 The MAVLink dialect compiled by default by QGC is for the pixhawk. Setting the `MAVLINK_CONF` variable sets the dialects.
