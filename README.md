@@ -15,7 +15,8 @@
 
 ##Firebird UAV specific instructions
 After building the QGroundControl application from source, copy the "QGroundControl.org" folder to %APPDATA% in Windows to obtain the custom widgets
-to control the UAV camera and on screen display.
+to control the UAV camera and on screen display. Once copied, modify the .ini file inside the "QGroundControl.org" folder such that the 
+SavedFilesLocation= parameter has a value that matched the qgroundcontrol location on your computer.
 
 ## Documentation
 For generating documentation, refer to this readme or the <http://qgroundcontrol.org> website.
