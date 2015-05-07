@@ -13,6 +13,9 @@
 * Credits:
 <http://qgroundcontrol.org/credits>
 
+##Firebird UAV specific instructions
+After building the QGroundControl application from source, copy the "QGroundControl.org" folder to %APPDATA% in Windows to obtain the custom widgets
+to control the UAV camera and on screen display.
 
 ## Documentation
 For generating documentation, refer to this readme or the <http://qgroundcontrol.org> website.
@@ -24,7 +27,7 @@ There are three ways to obtain the QGroundControl source code from our GitHub re
 This option assumes that you have Git already. To clone (checkout) the QGC repository, run the following command in the directory that you want the qgroundcontrol folder to be created:
 
 ```
-git clone --recursive git://github.com/mavlink/qgroundcontrol.git
+git clone --recursive https://github.com/fdlpm/qgroundcontrol.git
 ```
 
 ### Fork the Repository
